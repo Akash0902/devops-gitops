@@ -13,11 +13,9 @@ spec:
       labels:
         app: devops-app
     spec:
-      imagePullSecrets:
-        - name: nexus-secret
       containers:
-        - name: devops-app
-          image: <IMAGE_TAG_HOLDER>
-          imagePullPolicy: Always
-          ports:
-            - containerPort: 5000
+      - name: devops-app
+        image: 485429562577.dkr.ecr.ap-south-1.amazonaws.com/devops-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
